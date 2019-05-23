@@ -93,7 +93,7 @@
 }
 
 .side-left {
-  background: url(../../assets/mainbg.jpg);
+  background: url(../../assets/mainbgs.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
