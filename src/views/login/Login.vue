@@ -30,9 +30,9 @@
                               <div class="main-content">
                                  <Col :xs="22" :sm="22" :md="20" :lg="16" class="intro-text hide-overflow align-center">
                                   <transition
-  name="bounce"
+  name="slide-fade"
   >
-                              <div id="slide_out" v-if="show" class="relative" v-bind:style="styleObject1">
+                              <div id="slide_out" v-if="show" class="relative" v-bind:style="styleObject1" style="opacity: 1; top: 0px; display: block;">
                               <img class="inline-block margin-bottom-5" src="img/tree.png" alt="chrismas">
                               <div id="countdown" class=" secondery-font font-16 font-italic margin-bottom-20">
                               <span class="days">00</span>
@@ -47,14 +47,13 @@
                                   </transition>
 
                         <div id="slide_in"  class="text-center  notify-form-wrap relative hide-block hide-left-opac" v-bind:style="styleObject">
-                      <a id="notify_close" class="close-notify margin-bottom-15 margin-lr-auto" href="#">
-                          55
-                          </a>
-
-                  <div class="notify-wrap">
-                </div>
+                          <div>
+                            <div>
+                              Props：
+        <Input prefix="ios-contact" placeholder="Enter name" style="width: auto" />
+    </div>
+    </div>
                   </div>
-                    </transition>
                                  </col>
                               </div>
                             </div>
@@ -77,22 +76,20 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.bounce-enter-active {
-  animation: bounce-in .5s;
+.slide-fade-enter-active {
+  transition: all .3s ease;
 }
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
+.slide-fades-enter-active {
+  transition: all .3s ease;
+  opacity: 1;
 }
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 
 .side-left {
