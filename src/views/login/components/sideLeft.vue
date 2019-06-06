@@ -16,7 +16,7 @@
 </template>
 <style lang="scss" scoped>
 .side-left {
-  background: url(../../../assets/images/change-leftBg3.jpg);
+  background: url(../../../assets/images/change-leftBg4.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
